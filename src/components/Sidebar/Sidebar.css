@@ -1,0 +1,117 @@
+.sidebar{
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+}
+
+.sidebar img{
+    width: 20px;
+}
+
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .newchat{
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e0e7ff;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
+.sidebar .recent-title{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sidebar .recent-entry{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+}
+
+.sidebar .recent-entry:hover{
+    background-color: #d1d5db;
+}
+
+.sidebar .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; 
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+  }
+  .sidebar .newchat{
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 5px; 
+  }
+  
+  .sidebar .menu{
+    margin-left: 5px;
+  }
+
+  .sidebar .recent{
+    margin-left: -10px;
+  }
+
+    .sidebar .recent img{
+        display: none;
+  }
+
+  .sidebar .recent .recent-entry{
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background-color: white;
+    border-style: solid;
+  }
+  .sidebar .bottom-item {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 5px; 
+  }
+  
+
+}

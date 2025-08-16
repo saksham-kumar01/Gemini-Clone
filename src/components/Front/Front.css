@@ -1,0 +1,255 @@
+.main{
+    flex: 1 ;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+
+}
+
+.main .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 22px;
+    padding: 20px;
+    color: #585858
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .cards .card {
+    height: 200px;
+    padding: 15px;
+    background: #f0f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p{
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover{
+    background-color: #dfe4ea;
+}
+
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #f0f4f9;
+    border-radius: 20px;
+}
+
+.search-box img{
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #585858;
+}
+
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main .bottom-info{
+    text-align: center;
+    margin: 10px auto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.result{
+    padding: 0px;
+    max-height: 70vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #585858;
+    margin: 20px 0px;
+}
+
+.result img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.blinking-icon {
+  animation: blink 1s linear infinite;
+}
+
+.result-data p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.result-data{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s linear infinite;
+}
+
+@keyframes loader{
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main{
+        position: relative;
+        padding-bottom: 0px;
+        height: 100%;
+    }
+
+    .main .cards{
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .main .cards .card{
+        height: 100%;
+        
+    }
+
+    .main .cards p {
+        display: none;
+    }
+
+    .main .cards img{
+        width: 30px;
+        bottom: 10px;
+        right: 10px;
+        background: none;
+    }
+
+    .main-bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+    }
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+       padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+    .loader hr{
+        height: 15px;
+        width: 28vh;
+    }
+}
+

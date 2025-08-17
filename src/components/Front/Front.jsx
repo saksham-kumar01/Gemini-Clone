@@ -18,7 +18,7 @@ function front() {
         {!showResult
         ?<>
         <div className="greet">
-          <p><span>HELLO, Dev.</span></p>
+          <p><span>HELLO, Sam.</span></p>
           <p>How can I help you today?</p>
         </div>
         <div className="cards">
